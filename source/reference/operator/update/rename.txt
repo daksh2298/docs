@@ -95,7 +95,7 @@ name of the field and the new name:
 
 .. code-block:: javascript
 
-   db.students.updateMany( {}, { $rename: { "nmae": "name" } } )
+   db.students.updateMany( {}, { "$rename": { "nmae": "name" } } )
 
 This operation renames the field ``nmae`` to ``name`` for all documents
 in the collection:
@@ -133,7 +133,7 @@ also use the dot notation in the new name, as in the following:
 
 .. code-block:: javascript
 
-   db.students.update( { _id: 1 }, { $rename: { "name.first": "name.fname" } } )
+   db.students.update( { _id: 1 }, { "$rename": { "name.first": "name.fname" } } )
 
 This operation renames the embedded field ``first`` to ``fname``:
 
@@ -155,7 +155,7 @@ the following:
 
 .. code-block:: javascript
 
-   db.students.update( { _id: 1 }, { $rename: { 'wife': 'spouse' } } )
+   db.students.update( { _id: 1 }, { "$rename": { 'wife': 'spouse' } } )
 
 This operation does nothing because there is no field named
 ``wife``.
